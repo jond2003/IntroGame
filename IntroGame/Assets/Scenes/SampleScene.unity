@@ -577,15 +577,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3093509487644651776, guid: c9e88aa14005a1d4d8d5bbf2b2d70df4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.95
+      value: 5.13
       objectReference: {fileID: 0}
     - target: {fileID: 3093509487644651776, guid: c9e88aa14005a1d4d8d5bbf2b2d70df4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.63
+      value: 0.51
       objectReference: {fileID: 0}
     - target: {fileID: 3093509487644651776, guid: c9e88aa14005a1d4d8d5bbf2b2d70df4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.4
+      value: 5.06
       objectReference: {fileID: 0}
     - target: {fileID: 3093509487644651776, guid: c9e88aa14005a1d4d8d5bbf2b2d70df4, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1169,8 +1169,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveValue: {x: 0, y: 0}
   speed: 500
-  scoreText: {fileID: 0}
-  winText: {fileID: 0}
+  scoreText: {fileID: 1998266108}
+  winText: {fileID: 200763433}
 --- !u!1 &731250637
 GameObject:
   m_ObjectHideFlags: 0
