@@ -60,13 +60,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
     public Vector2 moveValue;
     public float speed;
     private int count;
-    private int numPickups = 8; // Put here the number of pickups you have.
+    private int numPickups = 3; // Put here the number of pickups you have.
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI winText;
 
@@ -75,6 +76,10 @@ public class PlayerController : MonoBehaviour
         count = 0;
         winText.text = " ";
         SetCountText();
+    }
+
+    void OnMove(InputValue value) {
+        moveValue = value.Get<Vector2>();
     }
 
     void FixedUpdate()
