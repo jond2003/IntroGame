@@ -1,16 +1,12 @@
-/*
 using System.Collections;
-using UnityEngine.InputSystem;
-using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-
     public Vector2 moveValue;
     public float speed;
     private int count;
@@ -28,53 +24,6 @@ public class PlayerController : MonoBehaviour
     void OnMove(InputValue value)
     {
         moveValue = value.Get<Vector2>();
-    }
-    void FixedUpdate()
-    {
-        Vector3 movement = new Vector3(moveValue.x, 0.0f, moveValue.y);
-        GetComponent<Rigidbody>().AddForce(movement * speed * Time.fixedDeltaTime);
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.tag == "PickUp")
-        {
-            other.gameObject.SetActive(false);
-            count++;
-            SetCountText();
-        }
-    }
-
-    private void SetCountText()
-    {
-        scoreText.text = " Score : " + count.ToString();
-        if (count >= numPickups) {
-            winText.text = " You win ! ";
-        }
-    }
-}
-*/
-
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
-using TMPro;
-
-public class PlayerController : MonoBehaviour
-{
-    public Vector2 moveValue;
-    public float speed;
-    private int count;
-    private int numPickups = 8; // Put here the number of pickups you have.
-    public TextMeshProUGUI scoreText;
-    public TextMeshProUGUI winText;
-
-    void Start()
-    {
-        count = 0;
-        winText.text = " ";
-        SetCountText();
     }
 
     void FixedUpdate()
